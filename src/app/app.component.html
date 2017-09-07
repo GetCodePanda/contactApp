@@ -1,13 +1,12 @@
 <div id="app-wrapper">
-  <md-grid-list cols="12" rowHeight="2:1">
-    <md-grid-tile colspan='2'>
-        <app-sidenav></app-sidenav>
+  <md-grid-list cols="16" rowHeight="{{getScreenHeight()}}" gutterSize="1px">
+    <md-grid-tile colspan='1'>
+        <app-sidebar></app-sidebar>
     </md-grid-tile>
-    <md-grid-tile colspan='10'>
+    <md-grid-tile colspan='15'>
         <md-grid-tile-header>
-          <app-header></app-header>
+          <app-header [appTitle]="title"></app-header>
         </md-grid-tile-header>
-        
         <md-grid-tile-footer>
           <app-footer></app-footer>
         </md-grid-tile-footer>
