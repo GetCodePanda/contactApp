@@ -1,0 +1,27 @@
+md-sidenav-container, md-sidenav{
+    min-height:100vh !important;
+    background-color: rgba(255, 255, 255, 0) !important;    
+}
+
+.app-sidenav{
+    margin-top:20px !important;
+}
+
+md-icon.contact-phone,md-icon.import-contacts,md-icon.info-outline,md-icon.person-pin{
+    color:#ffffff !important;
+    margin-left:15px;
+}
+
+md-icon.contact-phone,md-icon.import-contacts{
+    font-size:45px !important;
+    margin-left:19px;
+}
+md-icon.info-outline,md-icon.person-pin{
+    font-size:54px !important;
+}
+
+button.menu-button{
+    border:0 !important;
+    background-color: rgba(255, 255, 255, 0) !important;  
+    outline:none!important;
+}

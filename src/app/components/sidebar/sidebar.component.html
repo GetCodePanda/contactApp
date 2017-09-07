@@ -1,0 +1,82 @@
+<md-sidenav-container >
+    <md-sidenav 
+      mode="side"
+      opened="true"
+      class="app-sidenav" 
+    >
+    <md-list>
+      <md-list-item>
+        <button md-icon-button [mdMenuTriggerFor]="menuContacts" class="menu-button">
+          <md-icon class="contact-phone">contact_phone</md-icon>
+        </button>
+        <md-menu #menuContacts="mdMenu">
+            <a routerLink="/view-contacts" routerLinkActive="active">
+              <button md-menu-item>
+                <md-icon>account_circle</md-icon>
+                <span>My Contacts</span>
+              </button>
+            </a>
+            <a routerLink="/add-contacts" routerLinkActive="active">
+              <button md-menu-item>
+                <md-icon>add_circle</md-icon>
+                <span>Add New</span>
+              </button>
+            </a>
+        </md-menu>
+      </md-list-item>
+      <br/>
+      <md-list-item>
+        <button md-icon-button [mdMenuTriggerFor]="menuContactsBook" class="menu-button">
+          <md-icon class="import-contacts">import_contacts</md-icon>
+        </button>
+        <md-menu #menuContactsBook="mdMenu">
+          <button md-menu-item>
+            <md-icon>account_circle</md-icon>
+            <span>My Diary</span>
+          </button>
+          <button md-menu-item>
+            <md-icon>search</md-icon>
+            <span>Search</span>
+          </button>
+        </md-menu>
+      </md-list-item>
+      <br/>
+      <md-list-item>
+        <button md-icon-button [mdMenuTriggerFor]="menuContactsInfo" class="menu-button">
+          <md-icon class="info-outline">info_outline</md-icon>          
+        </button>
+        <md-menu #menuContactsInfo="mdMenu">
+          <button md-menu-item>
+            <md-icon>info</md-icon>
+            <span>Feed a Info</span>
+          </button>
+          <button md-menu-item>
+            <md-icon>assignment_late</md-icon>
+            <span>My Feeds</span>
+          </button>
+        </md-menu>
+      </md-list-item>
+      <br/>
+      <md-list-item>
+        <button md-icon-button [mdMenuTriggerFor]="menuUserProfile" class="menu-button">
+          <md-icon class="person-pin">person_pin</md-icon>          
+        </button>
+        <md-menu #menuUserProfile="mdMenu">
+          <a routerLink="/view-profile" routerLinkActive="active">
+            <button md-menu-item>
+              <md-icon>account_circle</md-icon>
+              <span>View Profile</span>
+            </button>
+          </a>
+          <a routerLink="/edit-profile" routerLinkActive="active">
+            <button md-menu-item>
+              <md-icon>add_circle</md-icon>
+              <span>Edit Profile</span>
+            </button>
+          </a>
+        </md-menu>
+      </md-list-item>
+      
+    </md-list>
+    </md-sidenav>
+  </md-sidenav-container>
