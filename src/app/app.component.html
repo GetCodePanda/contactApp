@@ -1,14 +1,16 @@
 <div id="app-wrapper">
-  <md-grid-list cols="16" rowHeight="{{getScreenHeight()}}" gutterSize="1px">
+  <md-grid-list cols="25" rowHeight="{{getScreenHeight()}}" gutterSize="1px">
     <md-grid-tile colspan='1'>
       <app-sidebar></app-sidebar>
     </md-grid-tile>
-    <md-grid-tile colspan='15'>
+    <md-grid-tile colspan='24' class="app-content-wrapper">
       <md-grid-tile-header>
         <app-header [appTitle]="title"></app-header>
       </md-grid-tile-header>
 
-      <router-outlet></router-outlet>
+      <div class="app-content-wrapper">
+        <router-outlet></router-outlet>
+      </div>
 
       <md-grid-tile-footer>
         <app-footer></app-footer>

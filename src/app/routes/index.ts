@@ -6,7 +6,7 @@ import { EditContactComponent } from './../components/contacts/edit-contact/edit
 import { ViewProfileComponent } from './../components/profiles/view-profile/view-profile.component';
 import { EditProfileComponent } from './../components/profiles/edit-profile/edit-profile.component';
 
-const appRoutes:Routes = [
+export const appRoutes:Routes = [
     {path:'', component:ContactsComponent},
     {path:'add-contacts', component:AddContactComponent , data:{title:"Here You Are"}},
     {path:'view-contacts', component:ContactsComponent},
@@ -16,4 +16,3 @@ const appRoutes:Routes = [
     {path:'edit-profile', component:EditProfileComponent},
 ];
 
-export default appRoutes;

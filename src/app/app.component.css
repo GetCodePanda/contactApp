@@ -1,8 +1,11 @@
-.app-brand-name{
+/* .app-brand-name{
     text-align: center !important;
-}
+} */
 
 md-grid-tile {
-    background: lightblue;
+    background: #93a1a140;
 }
 
+.app-content-wrapper{
+    background-color: #FFFFFF !important;
+}

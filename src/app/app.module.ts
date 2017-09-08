@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 //Angular Material
 import { 
@@ -9,9 +10,11 @@ import {
   MdSidenavModule, 
   MdGridListModule, 
   MdIconModule, 
-  MdMenuModule } from '@angular/material';
+  MdMenuModule, 
+  MdInputModule,
+  MdButtonModule} from '@angular/material';
 
-import appRoutes from './routes'
+import {appRoutes} from './routes'
 
 // Application components
 import { AppComponent } from './app.component';
@@ -46,7 +49,11 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
     MdSidenavModule,
     MdGridListModule,
     MdIconModule,
-    MdMenuModule
+    MdMenuModule,
+    MdInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MdButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
