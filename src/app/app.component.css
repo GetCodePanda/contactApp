@@ -3,9 +3,13 @@
 } */
 
 md-grid-tile {
-    background: #93a1a140;
+    background: #657b83;
 }
 
 .app-content-wrapper{
-    background-color: #FFFFFF !important;
+    background-color: #fdf6e3 !important;
+}
+
+md-grid-tile-header,md-grid-tile-footer{
+    opacity: 0.5 !important;
 }

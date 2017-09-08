@@ -1,6 +1,6 @@
 md-sidenav-container, md-sidenav{
     min-height:100vh !important;
-    background-color: rgba(255, 255, 255, 0) !important;    
+    background-color: rgba(201, 193, 172, 0.85) !important;    
 }
 
 .app-sidenav{
@@ -8,20 +8,30 @@ md-sidenav-container, md-sidenav{
 }
 
 md-icon.contact-phone,md-icon.import-contacts,md-icon.info-outline,md-icon.person-pin{
-    color:#ffffff !important;
+    color:#3A362D !important;
     margin-left:15px;
+    margin-top:2em;
+    opacity: 0.5;
+}
+
+md-list-item{
+    margin-top:2.2em !important; 
 }
 
 md-icon.contact-phone,md-icon.import-contacts{
-    font-size:45px !important;
+    font-size:42px !important;
     margin-left:19px;
 }
 md-icon.info-outline,md-icon.person-pin{
-    font-size:54px !important;
+    font-size:53px !important;
 }
 
 button.menu-button{
     border:0 !important;
     background-color: rgba(255, 255, 255, 0) !important;  
     outline:none!important;
+}
+
+md-icon.contact-phone:hover,md-icon.import-contacts:hover,md-icon.info-outline:hover,md-icon.person-pin:hover{
+    opacity:1;
 }
