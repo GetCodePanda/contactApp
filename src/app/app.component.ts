@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title="App"
+  title="Here You Are"
   screenHeight:number = window.innerHeight;
 
   getScreenHeight(){

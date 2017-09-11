@@ -9,7 +9,7 @@ const EMAIL_REGEX = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA
   styleUrls: ['./add-contact.component.css']
 })
 export class AddContactComponent implements OnInit {
-
+  
   constructor() { }
 
   emailFormControl = new FormControl('', [

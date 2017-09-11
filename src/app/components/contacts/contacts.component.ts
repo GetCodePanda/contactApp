@@ -1,7 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
-const data = [
-  {   id:1,
+interface Contact {
+    id:number,
+    first_name:string,
+    last_name:string,
+    middle_name:string,
+    phone_number_one:number,
+    phone_number_two:number,
+    dob:string,
+    age:number,
+    email:string,
+    permanent_address:string,
+    alternate_address:string,
+    avator:string
+}
+
+const data= [
+  {id:1,
       first_name:"surendar",
       last_name:"kalyanam",
       middle_name:" ",
@@ -42,7 +57,7 @@ const data = [
   },
   {   id:4,
       first_name:"Vinoth",
-      last_name:"kalyanam",
+      last_name:"k",
       middle_name:" ",
       phone_number_one:9344444494,
       phone_number_two:9896666666,
@@ -57,15 +72,27 @@ const data = [
 
 
 @Component({
-  selector: 'app-contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+    selector: 'app-contacts',
+    templateUrl: './contacts.component.html',
+    styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
+    // this property to toggle the extra menu 
+    // while user right click the contact list items ..
+    currentContact;
+    // right click test
+    contacts:Array<Contact>=data;
 
-  constructor() { }
-  contacts:any[]=data;
-  ngOnInit() {
-  }
+    constructor() { }
+
+    onRightClick(event, contact) {
+        console.log(contact);
+        if(this.currentContact === contact) return;
+        this.currentContact = contact;
+    }
+
+
+    ngOnInit() {
+    }
 
 }

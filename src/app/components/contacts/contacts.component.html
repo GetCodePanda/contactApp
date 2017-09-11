@@ -11,8 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    
-    <tr *ngFor="let contact of contacts">
+    <tr *ngFor="let contact of contacts" (contextmenu)="onRightClick($event , contact)">
       <td>
           <img src="{{contact.avator}}" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
       </td>
@@ -55,3 +54,7 @@
     </tr>
   </tfoot>  
 </table>
+<div class="ui items app-contact-extra-menu" *ngIf="currentContact" >
+    <div class="item"> <a routerLink="/view-contact/{{currentContact.id}}" routerLinkActive="active">View</a></div>
+    <div class="item"><a routerLink="/edit-contact/{{currentContact.id}}" routerLinkActive="active">Edit</a></div>
+</div>

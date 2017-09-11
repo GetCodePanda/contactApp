@@ -8,10 +8,10 @@ import { EditProfileComponent } from './../components/profiles/edit-profile/edit
 
 export const appRoutes:Routes = [
     {path:'', component:ContactsComponent},
-    {path:'add-contacts', component:AddContactComponent , data:{title:"Here You Are"}},
+    {path:'add-contacts', component:AddContactComponent},
     {path:'view-contacts', component:ContactsComponent},
-    {path:'view-contact', component:ViewContactComponent},
-    {path:'edit-contact', component:EditContactComponent},
+    {path:'view-contact/:id', component:ViewContactComponent},
+    {path:'edit-contact/:id', component:EditContactComponent},
     {path:'view-profile', component:ViewProfileComponent},
     {path:'edit-profile', component:EditProfileComponent},
 ];
