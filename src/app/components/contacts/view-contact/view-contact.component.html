@@ -1,3 +1,34 @@
-<p>
-  view-contact works! {{id}}
-</p>
+<div id="view-profile">
+    <div class="container">
+      <div class="one column row">
+        <div class="column">
+          <img class="ui medium circular image" src="{{currentContact.avator}}">
+          <h3 class="ui header">
+            {{currentContact.first_name}} {{currentContact.middle_name }} {{currentContact.last_name }}
+          </h3>
+          <hr/>
+          <div>
+            <strong>DOB:</strong>{{currentContact.dob}}
+          </div>
+          <div>
+            <strong>Age:</strong>{{currentContact.age}}
+          </div>
+          <div>
+            <strong>Email:</strong>{{currentContact.email}}
+          </div>
+          <div>
+            <strong>Contact No 1:</strong>{{currentContact.phone_number_one}}
+          </div>
+          <div>
+            <strong>Contact No 2:</strong>{{currentContact.phone_number_two}}
+          </div>
+          <div>
+            <strong>Permanent Address:</strong>{{currentContact.permanent_address}}
+          </div>
+          <div>
+            <strong>Alternate Address:</strong>{{currentContact.alternate_address}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

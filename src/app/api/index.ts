@@ -1,5 +1,5 @@
-export const data = [
-    {   id:1,
+export const data= [
+    {id:1,
         first_name:"surendar",
         last_name:"kalyanam",
         middle_name:" ",
@@ -10,7 +10,7 @@ export const data = [
         email:"sure@gmail.com",
         permanent_address:"No:123, Main Street, Villpuram",
         alternate_address:"No:232 , Sub Main Street, Villupuram",
-        avator:"https://semantic-ui.com/images/avatar/small/elliot.jpg"
+        avator:"https://semantic-ui.com/images/avatar/large/elliot.jpg"
     },
     {   id:2,
         first_name:"sudhakar",
@@ -23,7 +23,7 @@ export const data = [
         email:"sudha@gmail.com",
         permanent_address:"No:123, Main Street, Villpuram",
         alternate_address:"No:232 , Sub Main Street, Villupuram",
-        avator:"https://semantic-ui.com/images/avatar/small/elliot.jpg"
+        avator:"https://semantic-ui.com/images/avatar/large/elliot.jpg"
     },
     {   id:3,
         first_name:"vijay",
@@ -36,7 +36,7 @@ export const data = [
         email:"vijay@gmail.com",
         permanent_address:"No:123, Main Street, Villpuram",
         alternate_address:"No:232 , Sub Main Street, Villupuram",
-        avator:"https://semantic-ui.com/images/avatar/small/elliot.jpg"
+        avator:"https://semantic-ui.com/images/avatar/large/elliot.jpg"
     },
     {   id:4,
         first_name:"Vinoth",
@@ -49,6 +49,6 @@ export const data = [
         email:"vino@gmail.com",
         permanent_address:"No:123, Main Street, Villpuram",
         alternate_address:"No:232 , Sub Main Street, Villupuram",
-        avator:"https://semantic-ui.com/images/avatar/small/elliot.jpg"
+        avator:"https://semantic-ui.com/images/avatar/large/elliot.jpg"
     },
-];
+  ];
