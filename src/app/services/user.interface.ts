@@ -1,14 +1,14 @@
-export interface Contact {
+export  interface UserInterface {
     id:number,
     first_name:string,
     last_name:string,
     middle_name:string,
     phone_number_one:number,
     phone_number_two:number,
-    dob:string,
     age:number,
+    dob:string,
     email:string,
-    permanent_address:string,
-    alternate_address:string,
+    address:string,
+    about_me:string,
     avatar:string
 }

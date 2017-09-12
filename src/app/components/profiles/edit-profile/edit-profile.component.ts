@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './../../../services/user.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditProfileComponent implements OnInit {
 
-  constructor() { }
+  initialData;
+  constructor(private _userService:UserService) { }
 
   ngOnInit() {
+    this.initialData = this._userService.getProfile();
   }
 
 }

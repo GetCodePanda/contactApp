@@ -1,130 +1,61 @@
 <div id="add-contact">
-    
-    <form class="example-form">
-      <div class="ui grid">
-        <div class="three column row">
-          <div class="column">
+  <form class="ui form">
+    <div class="ui grid">
+          <div class="two column row">
             <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="First Name" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Last Name" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Phone Number 1" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Phone Number 2" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            
-          </div>
-          <div class="column">
-              <div class="column">
-                  <md-form-field class="example-full-width">
-                    <input mdInput placeholder="Middle Name" [formControl]="emailFormControl">
-                    <md-error *ngIf="emailFormControl.hasError('pattern')">
-                      Please enter a valid email address
-                    </md-error>
-                    <md-error *ngIf="emailFormControl.hasError('required')">
-                      Email is <strong>required</strong>
-                    </md-error>
-                  </md-form-field>
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" name="first-name" placeholder="First Name">
               </div>
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="DOB" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
+              <div class="field">
+                <label>Middle Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>DOB</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Age</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Permanent Address</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Alternate Address</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
             </div>
             <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Middle Name" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Permanent Address" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-          </div>
-          <div class="column">
-            <div class="column">
-                <md-form-field class="example-full-width">
-                  <input mdInput placeholder="Alternate Address" [formControl]="emailFormControl">
-                  <md-error *ngIf="emailFormControl.hasError('pattern')">
-                    Please enter a valid email address
-                  </md-error>
-                  <md-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                  </md-error>
-                </md-form-field>
-            </div>
-            <div class="column">
-              Image
-            </div>
-            <div class="column">
-              <md-form-field class="example-full-width">
-                <input mdInput  placeholder="Upload image">
-              </md-form-field>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Phone Number 1</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Phone Number 2</label>
+                <input type="text" name="last-name" placeholder="Last Name">
+              </div>
+              <div class="field">
+                <label>Email</label>
+                <input type="text" name="last-name"  placeholder="Last Name">
+              </div>
+              <div class="field" *ngIf="">
+                <label>Contact Image</label>
+                <img src=""  class="ui medium circular image"/>
+              </div>
+              <div class="field">
+                <input type="file"   placeholder="Last Name">
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-            <div class="column">
-              <button md-raised-button>Save</button>
-              <button md-raised-button color="primary">clear</button>
-              <button md-raised-button color="accent">cancel</button>
-            </div>
-        </div>
       </div>
-    </form>
+      <br>
+      <button class="ui button" type="submit">Submit</button>
+  </form>
 </div>

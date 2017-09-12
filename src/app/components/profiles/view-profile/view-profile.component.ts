@@ -1,4 +1,6 @@
+import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-view-profile',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ViewProfileComponent implements OnInit {
 
-  constructor() { }
+  data;
+  constructor(
+    private _userService:UserService
+  ) { }
 
   ngOnInit() {
+    this.data = this._userService.getProfile();
   }
 
 }

@@ -4,6 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
+// SERVICES 
+import { UserService } from './services/user.service';
+
 //Angular Material
 import { 
   MdToolbarModule, 
@@ -55,7 +58,7 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
     ReactiveFormsModule,
     MdButtonModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

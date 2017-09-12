@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { data } from './../../../api/index';
+import { Contact } from './../interface/index';
 
 
 @Component({
@@ -11,8 +12,9 @@ import { data } from './../../../api/index';
 export class ViewContactComponent implements OnInit {
 
   id;
-  contacts=data;
-  currentContact;
+  contacts:Array<Contact>=data;
+  currentContact:Contact;
+  
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -23,7 +25,6 @@ export class ViewContactComponent implements OnInit {
       const contactId  = Number(id);
       // console.log(typeof(contactId) , typeof(contact.id))
       // console.log(contact.id);
-
       if(contact.id === contactId ) {
         // console.log(contact.id)
         return this.currentContact = contact;

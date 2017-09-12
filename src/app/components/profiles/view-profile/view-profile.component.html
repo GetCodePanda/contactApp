@@ -2,31 +2,31 @@
   <div class="container">
     <div class="one column row">
       <div class="column">
-        <img class="ui medium circular image" src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
+        <img class="ui medium circular image" src="{{data.avatar}}">
         <h3 class="ui header">
-          Fist Name Middle Name Last Name
+          {{data.first_name}} {{data.middle_name}} {{data.last_name}}
         </h3>
         <hr/>
         <div>
-          <strong>DOB:</strong>30/01/2017
+          <strong>DOB:</strong>{{data.dob}}
         </div>
         <div>
-          <strong>Age:</strong>3
+          <strong>Age:</strong>{{data.age}}
         </div>
         <div>
-          <strong>Email:</strong>sure@gmail.com
+          <strong>Email:</strong>{{data.email}}
         </div>
         <div>
-          <strong>Contact No 1:</strong>9656565656
+          <strong>Contact No 1:</strong>{{data.phone_number_one}}
         </div>
         <div>
-          <strong>Contact No 2:</strong>9565995655
+          <strong>Contact No 2:</strong>{{data.phone_number_two}}
         </div>
         <div>
-          <strong>Address:</strong>N0:123 , Main Street. City. State. Country.
+          <strong>Address:</strong>{{data.address}}
         </div>
         <div>
-          <strong>About Me:</strong>haha.
+          <strong>About Me:</strong>{{data.about_me}}
         </div>
       </div>
     </div>
