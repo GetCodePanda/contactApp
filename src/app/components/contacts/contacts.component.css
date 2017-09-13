@@ -7,3 +7,8 @@
 .view-contacts-table{
     width:80vw !important;
 }
+
+.pagination-select{
+    display: inline-block !important;
+    margin-left: 20px !important;
+}

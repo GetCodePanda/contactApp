@@ -11,9 +11,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let contact of contacts" (contextmenu)="onRightClick($event , contact)">
+    <tr *ngFor="let contact of contacts | slice:initialValue:selectedValue" (contextmenu)="onRightClick($event , contact)">
       <td>
-          <img src="{{contact.avatar}}" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
+        <img src="{{contact.avatar}}" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
       </td>
       <td>{{contact.first_name}}</td>
       <td>{{contact.middle_name}}</td>
@@ -28,27 +28,24 @@
       <th></th>
       <th colspan="6">
           <div class="ui pagination menu">
-            <a class="active item">
+            <a class="item" (click)="prevPage($event)">
               <<
             </a>
-            <div class="item">
-              <
-            </div>
-            <a class="item">
-              1
+            <a class="item ui disabled button">
+              ...
             </a>
-            <a class="item">
-              2
-            </a>
-            <a class="item">
-              3
-            </a>
-            <a class="item">
-              >
-            </a>
-            <a class="item">
+            <a class="item" (click)="nextPage($event)">
               >>
             </a>
+          </div>
+          <div class="pagination-select">
+              <form>
+                  <md-select placeholder="items per page:" [(ngModel)]="selectedValue" name="food">
+                    <md-option *ngFor="let option of options" [value]="option.value">
+                      {{option.viewValue}}
+                    </md-option>
+                  </md-select>
+                </form>
           </div>
       </th>
     </tr>

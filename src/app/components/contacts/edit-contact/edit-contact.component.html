@@ -51,13 +51,13 @@
               </div>
               <div class="field">
                 <label>Contact Image</label>
-                <img src="{{currentContact.avatar}}"  class="ui medium circular image"/>
+                <img src="{{currentContact.avatar}}"  class="ui medium circular image upload-image"/>
               </div>
               
               <div class="field">
-                <button type="button"  ngFilePicker (filePick)="setImagePreview($event.dataURL)">
-                  Upload 
-                </button>
+                <button type="button"  class="ui active button" ngFilePicker (filePick)="setImagePreview($event)">
+                  <i class="cloud icon"></i> Upload  
+                </button><span *ngIf="fileName"> {{fileName}}</span>
               </div>
             </div>
           </div>

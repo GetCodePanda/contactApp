@@ -19,7 +19,8 @@ import {
   MdIconModule,
   MdMenuModule,
   MdInputModule,
-  MdButtonModule} from '@angular/material';
+  MdButtonModule,
+  MdSelectModule} from '@angular/material';
 
 import {appRoutes} from './routes';
 
@@ -50,18 +51,22 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
     EditContactComponent
   ],
   imports: [
+    // angular core ..
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    FilePickerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    // Angular Material
     MdSidenavModule,
     MdGridListModule,
     MdIconModule,
     MdMenuModule,
     MdInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MdButtonModule
+    MdButtonModule,
+    MdSelectModule,
+    // File Picker Module
+    FilePickerModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

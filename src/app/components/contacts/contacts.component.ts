@@ -21,6 +21,20 @@ export class ContactsComponent implements OnInit {
     // sample data from the api index files ..
     contacts: Array<Contact> = data;
 
+
+
+    // pagination dropdown menu..
+    // currently selected item value binded to this element..
+    initialValue = 0;
+    selectedValue = 5;
+
+
+    options = [
+        {value: 2, viewValue: 2},
+        {value: 5, viewValue: 5},
+        {value: 10, viewValue: 10}
+    ];
+
     constructor() { }
 
     // to handle the right click event to display the selected contact
@@ -33,16 +47,6 @@ export class ContactsComponent implements OnInit {
         this.currentContact = contact;
     }
 
-    // To handle the pagination select ...
-    setPagination(noOfRequestedItems) {
-        this.userRequestedNoOfItems = noOfRequestedItems;
-        return this.contacts.map((cv, i) => {
-            if (i < noOfRequestedItems ) {
-                console.log(cv , i);
-                return this.results.push(cv);
-            }
-        });
-    }
 
 
     ngOnInit() {

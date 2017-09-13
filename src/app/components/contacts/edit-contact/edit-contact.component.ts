@@ -1,6 +1,9 @@
+// Angular Lib
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+// Sample data...
 import { data } from './../../../api/index';
+// Contact interface...
 import { Contact } from './../interface/index';
 
 @Component({
@@ -9,9 +12,11 @@ import { Contact } from './../interface/index';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
+  // props..
   id;
   contacts: Array<Contact> = data;
   currentContact: Contact;
+  fileName: string;
   constructor(
     private route: ActivatedRoute,
     private router: Router
@@ -29,8 +34,10 @@ export class EditContactComponent implements OnInit {
     });
   }
 
-  setImagePreview(imageUrl) {
-    return this.currentContact.avatar = imageUrl;
+  setImagePreview(event) {
+    this.fileName = event.name;
+    this.currentContact.avatar = event.dataURL;
+    return;
   }
 
   ngOnInit() {
