@@ -2,22 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {RouterModule} from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// SERVICES 
+// SERVICES
 import { UserService } from './services/user.service';
 
-//Angular Material
-import { 
-  MdToolbarModule, 
-  MdSidenavModule, 
-  MdGridListModule, 
-  MdIconModule, 
-  MdMenuModule, 
+// File Picker Module ...
+import { FilePickerModule } from 'angular-file-picker';
+
+
+// Angular Material
+import {
+  MdToolbarModule,
+  MdSidenavModule,
+  MdGridListModule,
+  MdIconModule,
+  MdMenuModule,
   MdInputModule,
   MdButtonModule} from '@angular/material';
 
-import {appRoutes} from './routes'
+import {appRoutes} from './routes';
 
 // Application components
 import { AppComponent } from './app.component';
@@ -49,6 +53,7 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
+    FilePickerModule,
     MdSidenavModule,
     MdGridListModule,
     MdIconModule,

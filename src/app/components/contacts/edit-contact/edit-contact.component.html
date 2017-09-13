@@ -53,13 +53,16 @@
                 <label>Contact Image</label>
                 <img src="{{currentContact.avatar}}"  class="ui medium circular image"/>
               </div>
+              
               <div class="field">
-                <input type="file"  name="contact-avatar"   (click)="convertIntoBase64($event)" placeholder="Last Name">
+                <button type="button"  ngFilePicker (filePick)="setImagePreview($event.dataURL)">
+                  Upload 
+                </button>
               </div>
             </div>
           </div>
       </div>
       <br>
-      <button class="ui button" type="submit">Submit</button>
+      <button class="ui button" type="submit" >Submit</button>
   </form>
 </div>

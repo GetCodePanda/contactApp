@@ -29,8 +29,8 @@ export class EditContactComponent implements OnInit {
     });
   }
 
-  setImagePreview(event) {
-    return null;
+  setImagePreview(imageUrl) {
+    return this.currentContact.avatar = imageUrl;
   }
 
   ngOnInit() {
