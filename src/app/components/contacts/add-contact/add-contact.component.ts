@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { data } from './../../../api/index';
 
 @Component({
   selector: 'app-add-contact',
@@ -33,7 +34,7 @@ export class AddContactComponent implements OnInit {
   setImagePreview(event) {
     this.fileName = event.name;
     this.previewImage = event.dataURL;
-    this.contactImage = event.dataURL;
+    this.myForm.controls.contactImage.setValue(event.dataURL);
     return;
   }
   // log
@@ -43,7 +44,13 @@ export class AddContactComponent implements OnInit {
   //
   onSubmit(form) {
     console.log(form.value);
+    data.push(form.value);
   }
+
+  onDateChange(event) {
+    console.log(this.myForm.controls.age.setValue('15'));
+  }
+
   ngOnInit() {
     this.myForm = new FormGroup({
       firstName: new FormControl(this.firstName),
@@ -58,7 +65,6 @@ export class AddContactComponent implements OnInit {
       subAddress: new FormControl(this.subAddress),
       contactImage: new FormControl(this.contactImage),
     });
-
   }
 
 }

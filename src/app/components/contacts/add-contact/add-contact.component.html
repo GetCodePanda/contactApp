@@ -16,9 +16,9 @@
         <input mdInput placeholder="Email"  name="email" formControlName="email">
     </md-form-field>
     <md-form-field>
-        <input mdInput [mdDatepicker]="picker" placeholder="Choose a date of birth" name="dob" formControlName="dob">
+        <input mdInput (dateChange)="onDateChange($event.value)" [mdDatepicker]="picker" placeholder="Choose a date of birth" name="dob" formControlName="dob">
         <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-        <md-datepicker #picker (change) ="log($event)" ></md-datepicker>
+        <md-datepicker #picker ></md-datepicker>
     </md-form-field>
 
     <md-form-field class="example-full-width">
@@ -51,8 +51,7 @@
     >
     <i class="cloud icon"></i> Upload  
     </button><span *ngIf="fileName"> {{fileName}}</span>
-    <input type="hidden" name="contactImage"  ngFilePicker 
-    (filePick)="setImagePreview($event)" formControlName="contactImage" value="previewImage">
+    <input type="hidden" name="contactImage"  formControlName="contactImage" >
     <br><br>
     <button class="ui button"  type="submit">Create New Contact</button>
 

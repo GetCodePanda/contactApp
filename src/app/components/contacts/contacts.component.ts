@@ -49,7 +49,7 @@ export class ContactsComponent implements OnInit {
     }
 
     nextPage(event) {
-
+        
     }
 
     prevPage(event) {
