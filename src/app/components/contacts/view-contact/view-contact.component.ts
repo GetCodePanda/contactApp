@@ -12,30 +12,28 @@ import { Contact } from './../interface/index';
 export class ViewContactComponent implements OnInit {
 
   id;
-  contacts:Array<Contact>=data;
-  currentContact:Contact;
-  
+  contacts: Array<Contact> = data;
+  currentContact: Contact;
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
-  setCurrentContact(contacts , id){
-    return contacts.map((contact)=>{
+  setCurrentContact(contacts , id) {
+    return contacts.map((contact) => {
       const contactId  = Number(id);
       // console.log(typeof(contactId) , typeof(contact.id))
       // console.log(contact.id);
-      if(contact.id === contactId ) {
+      if (contact.id === contactId ) {
         // console.log(contact.id)
         return this.currentContact = contact;
       }
-    })
-  };
+    });
+  }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.setCurrentContact(this.contacts, this.id);
-    console.log(this.id , this.currentContact)
+    console.log(this.id , this.currentContact);
   }
-
 }

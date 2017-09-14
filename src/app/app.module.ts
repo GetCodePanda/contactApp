@@ -20,7 +20,9 @@ import {
   MdMenuModule,
   MdInputModule,
   MdButtonModule,
-  MdSelectModule} from '@angular/material';
+  MdSelectModule,
+  MdDatepickerModule,
+  MdNativeDateModule} from '@angular/material';
 
 import {appRoutes} from './routes';
 
@@ -65,6 +67,8 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
     MdInputModule,
     MdButtonModule,
     MdSelectModule,
+    MdNativeDateModule,
+    MdDatepickerModule,
     // File Picker Module
     FilePickerModule
   ],

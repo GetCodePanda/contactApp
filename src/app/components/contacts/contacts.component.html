@@ -40,12 +40,12 @@
           </div>
           <div class="pagination-select">
               <form>
-                  <md-select placeholder="items per page:" [(ngModel)]="selectedValue" name="food">
-                    <md-option *ngFor="let option of options" [value]="option.value">
-                      {{option.viewValue}}
-                    </md-option>
-                  </md-select>
-                </form>
+                <md-select placeholder="items per page:" [(ngModel)]="selectedValue" name="items">
+                  <md-option *ngFor="let option of options" [value]="option.value">
+                    {{option.viewValue}}
+                  </md-option>
+                </md-select>
+              </form>
           </div>
       </th>
     </tr>

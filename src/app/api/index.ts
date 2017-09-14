@@ -128,5 +128,19 @@ export const data = [
         permanent_address: 'No:123, Main Street, Villpuram',
         alternate_address: 'No:232 , Sub Main Street, Villupuram',
         avatar: 'https://semantic-ui.com/images/avatar/large/elliot.jpg'
+    },
+    {   id: 11,
+        first_name: 'Aruna',
+        last_name: 'k',
+        middle_name: ' ',
+        phone_number_one: 9344444494,
+        phone_number_two: 9896666666,
+        dob: '30/01/1993',
+        age: 12,
+        email: 'vino@gmail.com',
+        permanent_address: 'No:123, Main Street, Villpuram',
+        alternate_address: 'No:232 , Sub Main Street, Villupuram',
+        avatar: 'https://semantic-ui.com/images/avatar/large/elliot.jpg'
     }
 ];
+

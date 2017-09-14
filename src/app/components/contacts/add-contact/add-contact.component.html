@@ -1,61 +1,60 @@
 <div id="add-contact">
-  <form class="ui form">
-    <div class="ui grid">
-          <div class="two column row">
-            <div class="column">
-              <div class="field">
-                <label>First Name</label>
-                <input type="text" name="first-name" placeholder="First Name">
-              </div>
-              <div class="field">
-                <label>Middle Name</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>DOB</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Age</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Permanent Address</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Alternate Address</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-            </div>
-            <div class="column">
-              <div class="field">
-                <label>Last Name</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Phone Number 1</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Phone Number 2</label>
-                <input type="text" name="last-name" placeholder="Last Name">
-              </div>
-              <div class="field">
-                <label>Email</label>
-                <input type="text" name="last-name"  placeholder="Last Name">
-              </div>
-              <div class="field" *ngIf="">
-                <label>Contact Image</label>
-                <img src=""  class="ui medium circular image"/>
-              </div>
-              <div class="field">
-                <input type="file"   placeholder="Last Name">
-              </div>
-            </div>
-          </div>
-      </div>
-      <br>
-      <button class="ui button" type="submit">Submit</button>
+
+  <form  [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" >
+
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="First Name"  name="firstName" formControlName="firstName">
+    </md-form-field>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Middle Name"  name="middleName" formControlName="middleName">
+    </md-form-field>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Last Name"  name="lastName" formControlName="lastName">
+    </md-form-field>
+    <br><br>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Email"  name="email" formControlName="email">
+    </md-form-field>
+    <md-form-field>
+        <input mdInput [mdDatepicker]="picker" placeholder="Choose a date of birth" name="dob" formControlName="dob">
+        <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+        <md-datepicker #picker (change) ="log($event)" ></md-datepicker>
+    </md-form-field>
+
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Age" name="age" value="12" formControlName="age">
+    </md-form-field>
+    <br><br>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Contact Number 1"  name="phoneNumberOne" formControlName="phoneNumberOne" >
+    </md-form-field>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Contact Number 2"  name="phoneNumberTwo" formControlName="phoneNumberTwo" >
+    </md-form-field>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Permanent Address"  name="mainAddress" formControlName="mainAddress" >
+    </md-form-field>
+
+    <br><br>
+    <md-form-field class="example-full-width">
+        <input mdInput placeholder="Alternate Address"  name="subAddress" formControlName="subAddress" >
+    </md-form-field>
+    
+    <p>Image Preview :</p>
+    <img img class="ui medium circular image" style="width:150px !important" src="{{previewImage}}" alt="">
+    <br><br>
+    <button 
+      type="button"  
+      class="ui active button" 
+      ngFilePicker 
+      (filePick)="setImagePreview($event)"
+    >
+    <i class="cloud icon"></i> Upload  
+    </button><span *ngIf="fileName"> {{fileName}}</span>
+    <input type="hidden" name="contactImage"  ngFilePicker 
+    (filePick)="setImagePreview($event)" formControlName="contactImage" value="previewImage">
+    <br><br>
+    <button class="ui button"  type="submit">Create New Contact</button>
+
   </form>
 </div>
