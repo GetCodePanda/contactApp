@@ -1,50 +1,50 @@
 <div id="edit-profile">
-    <form class="ui form">
+    <form class="ui form" [formGroup]="editProfile" (ngSubmit)="onSubmit(editProfile)">
       {{initialData|json}}
       <div class="ui grid">
             <div class="two column row">
               <div class="column">
                 <div class="field">
                   <label>First Name</label>
-                  <input type="text" name="first-name" value="{{initialData.first_name}}" placeholder="First Name">
+                  <input type="text" name="firstName"  formControlName="firstName">
                 </div>
                 <div class="field">
                   <label>Middle Name</label>
-                  <input type="text" name="last-name" value="{{initialData.middle_name}}" placeholder="Last Name">
+                  <input type="text" name="middleName"  formControlName="middleName">
                 </div>
                 <div class="field">
                   <label>Last Name</label>
-                  <input type="text" name="last-name" value="{{initialData.last_name}}" placeholder="Last Name">
+                  <input type="text" name="lastName"  formControlName="lastName">
                 </div>
                 <div class="field">
                   <label>DOB</label>
-                  <input type="text" name="last-name" value="{{initialData.dob}}" placeholder="Last Name">
+                  <input type="text" name="dob"  formControlName="dob">
                 </div>
                 <div class="field">
                   <label>Age</label>
-                  <input type="text" name="last-name"  value="{{initialData.age}}" placeholder="Last Name">
+                  <input type="text" name="age"   formControlName="age">
                 </div>
               </div>
               <div class="column">
                 <div class="field">
                   <label>Email </label>
-                  <input type="text" name="last-name" value="{{initialData.email}}" placeholder="Last Name">
+                  <input type="text" name="email"  formControlName="email">
                 </div>
                 <div class="field">
                   <label>Contact 1</label>
-                  <input type="text" name="last-name" value="{{initialData.phone_number_one}}" placeholder="Last Name">
+                  <input type="text" name="phoneNumberOne"  formControlName="phoneNumberOne">
                 </div>
                 <div class="field">
                   <label>Contact 2</label>
-                  <input type="text" name="last-name" value="{{initialData.phone_number_two}}" placeholder="Last Name">
+                  <input type="text" name="phoneNumberTwo"  formControlName="phoneNumberTwo">
                 </div>
                 <div class="field">
                   <label>Address</label>
-                  <input type="text" name="last-name" value="{{initialData.address}}" placeholder="Last Name">
+                  <input type="text" name="address"  formControlName="address">
                 </div>
                 <div class="field">
                   <label>About Me</label>
-                  <input type="text" name="last-name" value="{{initialData.about_me}}" placeholder="Last Name">
+                  <input type="text" name="aboutMe"  formControlName="aboutMe">
                 </div>
               </div>
             </div>

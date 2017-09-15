@@ -23,7 +23,6 @@ export class ContactsComponent implements OnInit {
     contacts: Array<Contact> = data;
     // pagination dropdown menu..
     // currently selected item value binded to this element..
-    
     initialValue = 0;
     selectedValue = 2;
 
@@ -49,7 +48,7 @@ export class ContactsComponent implements OnInit {
     }
 
     nextPage(event) {
-        
+
     }
 
     prevPage(event) {

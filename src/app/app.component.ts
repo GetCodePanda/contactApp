@@ -1,4 +1,5 @@
 import { Component  , OnInit} from '@angular/core';
+import * as firebase from 'firebase';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,18 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
+    firebase.initializeApp({
+      apiKey: 'AIzaSyDkZT7eeaxc44ID9kPFWSiAyZpcSz9s0cM',
+      authDomain: 'contact-13fe7.firebaseapp.com',
+      databaseURL: 'https://contact-13fe7.firebaseio.com',
+      projectId: 'contact-13fe7',
+      storageBucket: 'contact-13fe7.appspot.com',
+      messagingSenderId: '273312495149'
+    });
 
+    firebase.database().ref('/contacts/').once('value').then(function(snapshot) {
+      return console.log(snapshot.val());
+    });
   }
 
 }

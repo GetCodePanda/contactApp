@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { data } from './../../../api/index';
+import { DateAdapter, NativeDateAdapter } from '@angular/material';
 
 @Component({
   selector: 'app-add-contact',
@@ -19,36 +20,47 @@ export class AddContactComponent implements OnInit {
   age = '';
   phoneNumberOne = '';
   phoneNumberTwo = '';
-  mainAddress = '';
-  subAddress = '';
-  contactImage = '';
+  permanentAddress = '';
+  alternateAddress = '';
+  avatar = '';
 
-  date;
+  isDisabled = true;
+
+  defaultDate = new Date(1993 , 1 , 30 );
   // image  preview :
   fileName;
   previewImage = 'https://semantic-ui.com//images/wireframe/square-image.png';
 
   // class constructor..
-  constructor() { }
+  constructor(dateAdapter: DateAdapter<NativeDateAdapter>) { dateAdapter.setLocale('de-DE'); }
   //
   setImagePreview(event) {
     this.fileName = event.name;
     this.previewImage = event.dataURL;
-    this.myForm.controls.contactImage.setValue(event.dataURL);
+    this.myForm.controls.avatar.setValue(event.dataURL);
     return;
-  }
-  // log
-  say() {
-    console.log(this.date);
   }
   //
   onSubmit(form) {
-    console.log(form.value);
+    const RandomId = Math.floor(Math.random() * 101);
+    console.log(form.value , form.value.id = RandomId  );
     data.push(form.value);
   }
 
   onDateChange(event) {
-    console.log(this.myForm.controls.age.setValue('15'));
+    // tslint:disable-next-line:prefer-const
+    let dob =  new Date(event.targetElement.value),
+        // tslint:disable-next-line:prefer-const
+        cd = new Date(),
+        // tslint:disable-next-line:prefer-const
+        diff = cd.getFullYear() - dob.getFullYear();
+
+          if ( cd.getDate() >= dob.getDate() && cd.getDay >= dob.getDay ) {
+            return this.myForm.controls.age.setValue(diff);
+          }else if ( cd.getDate() < dob.getDate() && cd.getDay() < dob.getDay() ) {
+            return this.myForm.controls.age.setValue(diff - 1);
+          }
+
   }
 
   ngOnInit() {
@@ -61,9 +73,9 @@ export class AddContactComponent implements OnInit {
       age: new FormControl(this.age),
       phoneNumberOne: new FormControl(this.phoneNumberOne),
       phoneNumberTwo: new FormControl(this.phoneNumberTwo),
-      mainAddress: new FormControl(this.mainAddress),
-      subAddress: new FormControl(this.subAddress),
-      contactImage: new FormControl(this.contactImage),
+      permanentAddress: new FormControl(this.permanentAddress),
+      alternateAddress: new FormControl(this.alternateAddress),
+      avatar: new FormControl(this.avatar),
     });
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from './../../../services/user.service';
 
 @Component({
@@ -9,10 +10,23 @@ import { UserService } from './../../../services/user.service';
 export class EditProfileComponent implements OnInit {
 
   initialData;
-  constructor(private _userService:UserService) { }
+  editProfile;
+  constructor(private _userService: UserService) { }
 
   ngOnInit() {
     this.initialData = this._userService.getProfile();
+    this.editProfile = new FormGroup({
+      firstName: new FormControl(this.initialData.firstName),
+      middleName: new FormControl(this.initialData.middleName),
+      lastName: new FormControl(this.initialData.lastName),
+      dob: new FormControl(this.initialData.dob),
+      age: new FormControl(this.initialData.age),
+      email: new FormControl(this.initialData.email),
+      phoneNumberOne: new FormControl(this.initialData.phoneNumberOne),
+      phoneNumberTwo: new FormControl(this.initialData.phoneNumberTwo),
+      address: new FormControl(this.initialData.address),
+      aboutMe: new FormControl(this.initialData.aboutMe)
+    });
   }
 
 }

@@ -1,7 +1,6 @@
 <div id="add-contact">
 
   <form  [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" >
-
     <md-form-field class="example-full-width">
         <input mdInput placeholder="First Name"  name="firstName" formControlName="firstName">
     </md-form-field>
@@ -16,13 +15,13 @@
         <input mdInput placeholder="Email"  name="email" formControlName="email">
     </md-form-field>
     <md-form-field>
-        <input mdInput (dateChange)="onDateChange($event.value)" [mdDatepicker]="picker" placeholder="Choose a date of birth" name="dob" formControlName="dob">
+        <input mdInput (dateChange)="onDateChange($event)" [mdDatepicker]="picker" placeholder="Choose a date of birth" name="dob" formControlName="dob">
         <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
-        <md-datepicker #picker ></md-datepicker>
+<md-datepicker #picker startView="year"  [startAt]="defaultDate"></md-datepicker>
     </md-form-field>
 
     <md-form-field class="example-full-width">
-        <input mdInput placeholder="Age" name="age" value="12" formControlName="age">
+        <input mdInput placeholder="Age" name="age" formControlName="age">
     </md-form-field>
     <br><br>
     <md-form-field class="example-full-width">
@@ -32,26 +31,26 @@
         <input mdInput placeholder="Contact Number 2"  name="phoneNumberTwo" formControlName="phoneNumberTwo" >
     </md-form-field>
     <md-form-field class="example-full-width">
-        <input mdInput placeholder="Permanent Address"  name="mainAddress" formControlName="mainAddress" >
+        <input mdInput placeholder="Permanent Address"  name="permanentAddress" formControlName="permanentAddress" >
     </md-form-field>
 
     <br><br>
     <md-form-field class="example-full-width">
-        <input mdInput placeholder="Alternate Address"  name="subAddress" formControlName="subAddress" >
+        <input mdInput placeholder="Alternate Address"  name="alternateAddress" formControlName="alternateAddress" >
     </md-form-field>
     
     <p>Image Preview :</p>
     <img img class="ui medium circular image" style="width:150px !important" src="{{previewImage}}" alt="">
     <br><br>
     <button 
-      type="button"  
-      class="ui active button" 
-      ngFilePicker 
-      (filePick)="setImagePreview($event)"
+        type="button"  
+        class="ui active button" 
+        ngFilePicker 
+        (filePick)="setImagePreview($event)"
     >
     <i class="cloud icon"></i> Upload  
     </button><span *ngIf="fileName"> {{fileName}}</span>
-    <input type="hidden" name="contactImage"  formControlName="contactImage" >
+    <input type="hidden" name="avatar"  formControlName="avatar" >
     <br><br>
     <button class="ui button"  type="submit">Create New Contact</button>
 

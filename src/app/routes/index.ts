@@ -6,13 +6,13 @@ import { EditContactComponent } from './../components/contacts/edit-contact/edit
 import { ViewProfileComponent } from './../components/profiles/view-profile/view-profile.component';
 import { EditProfileComponent } from './../components/profiles/edit-profile/edit-profile.component';
 
-export const appRoutes:Routes = [
-    {path:'', component:ContactsComponent},
-    {path:'add-contacts', component:AddContactComponent},
-    {path:'view-contacts', component:ContactsComponent},
-    {path:'view-contact/:id', component:ViewContactComponent},
-    {path:'edit-contact/:id', component:EditContactComponent},
-    {path:'view-profile', component:ViewProfileComponent},
-    {path:'edit-profile', component:EditProfileComponent},
+export const appRoutes: Routes = [
+    {path: '', component: ContactsComponent},
+    {path: 'add-contacts', component: AddContactComponent},
+    {path: 'view-contacts', component: ContactsComponent},
+    {path: 'view-contact/:id', component: ViewContactComponent},
+    {path: 'edit-contact/:id', component: EditContactComponent},
+    {path: 'view-profile', component: ViewProfileComponent},
+    {path: 'edit-profile', component: EditProfileComponent}
 ];
 
