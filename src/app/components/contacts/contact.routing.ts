@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule , Routes } from '@angular/router';
 
@@ -7,8 +8,7 @@ import { ViewContactComponent } from './view-contact/view-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 const contactRouter: Routes = [
-    {path: '', redirectTo: 'view-all' , pathMatch: 'full' },
-    {path: 'view-all' , component: ContactsComponent},
+    {path: 'contacts' , component: ContactsComponent},
     {path: 'add-contacts', component: AddContactComponent },
     {path: 'view-contacts', component: ContactsComponent},
     {path: 'view-contact/:id', component: ViewContactComponent},
@@ -17,7 +17,7 @@ const contactRouter: Routes = [
 
 
 @NgModule({
-    imports: [RouterModule.forChild(contactRouter)],
+    imports: [CommonModule , RouterModule.forChild(contactRouter)],
     exports: [RouterModule]
 })
 

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -7,13 +8,12 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const profileRouter: Routes = [
-    {path: '', redirectTo: 'view-profile' , pathMatch: 'full' },
     {path: 'view-profile' , component: ViewProfileComponent},
     {path: 'edit-profile', component: EditProfileComponent }
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(profileRouter)],
+    imports: [CommonModule , RouterModule.forChild(profileRouter)],
     exports: [RouterModule]
 })
 

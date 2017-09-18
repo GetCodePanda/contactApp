@@ -1,10 +1,13 @@
+import { CommonModule } from '@angular/common';
 // Angular Lib Imports
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 // App Root Routing Module import ...
-import { AppRoutingModule } from './routes/index';
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
+
 
 // App Modules imports ...
 import { AppProfileModule } from './components/profiles/profile.module';
@@ -29,8 +32,6 @@ import {
   MdDatepickerModule,
   MdNativeDateModule} from '@angular/material';
 
-import {appRoutes} from './routes';
-
 // Application components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -49,6 +50,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     // angular core ..
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     // Routing..
     AppRoutingModule,
     // App Other Module ..
@@ -58,11 +60,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MdSidenavModule,
     MdGridListModule,
     MdIconModule,
-    MdMenuModule,
-    MdInputModule,
-    MdSelectModule,
     MdNativeDateModule,
     MdDatepickerModule,
+    MdInputModule,
+    MdSelectModule,
+    MdMenuModule,
     // File Picker Module
     FilePickerModule
   ],
