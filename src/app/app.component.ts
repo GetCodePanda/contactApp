@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'Here You Are';
   screenHeight = window.innerHeight;
 
+
   getScreenHeight() {
     return this.screenHeight;
   }
@@ -24,10 +25,5 @@ export class AppComponent implements OnInit {
       storageBucket: 'contact-13fe7.appspot.com',
       messagingSenderId: '273312495149'
     });
-
-    firebase.database().ref('/contacts/').once('value').then(function(snapshot) {
-      return console.log(snapshot.val());
-    });
   }
-
 }
