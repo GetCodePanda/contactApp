@@ -8,11 +8,31 @@ import { ViewContactComponent } from './view-contact/view-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 
 const contactRouter: Routes = [
-    {path: 'contacts' , component: ContactsComponent},
-    {path: 'add-contacts', component: AddContactComponent },
-    {path: 'view-contacts', component: ContactsComponent},
-    {path: 'view-contact/:id', component: ViewContactComponent},
-    {path: 'edit-contact/:id', component: EditContactComponent}
+    {
+        path: 'contacts' ,
+        component: ContactsComponent,
+        data: { title : ' View All Contacts ' }
+    },
+    {
+        path: 'add-contacts',
+        component: AddContactComponent,
+        data: { title : 'Add Contacts' }
+    },
+    {
+        path: 'view-contacts',
+        component: ContactsComponent,
+        data: { title: 'View All Contacts'}
+    },
+    {
+        path: 'view-contact/:id',
+        component: ViewContactComponent,
+        data: { title : 'View Contact'}
+    },
+    {
+        path: 'edit-contact/:id',
+        component: EditContactComponent,
+        data: {title: 'Edit Content'}
+    }
 ];
 
 

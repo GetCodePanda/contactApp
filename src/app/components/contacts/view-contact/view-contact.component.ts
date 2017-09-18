@@ -10,6 +10,7 @@ import { Contact } from './../interface/index';
   styleUrls: ['./view-contact.component.css']
 })
 export class ViewContactComponent implements OnInit {
+  title: any;
 
   id;
   contacts: Array<Contact> = data;
@@ -17,7 +18,10 @@ export class ViewContactComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+    this.id = this.route.snapshot.paramMap.get('id');
+    this.title = route.snapshot.data['title'];
+    }
 
   setCurrentContact(contacts , id) {
     return contacts.map((contact) => {
@@ -32,7 +36,6 @@ export class ViewContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.id = this.route.snapshot.paramMap.get('id');
     this.setCurrentContact(this.contacts, this.id);
     console.log(this.id , this.currentContact);
   }

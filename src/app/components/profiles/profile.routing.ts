@@ -8,8 +8,16 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 const profileRouter: Routes = [
-    {path: 'view-profile' , component: ViewProfileComponent},
-    {path: 'edit-profile', component: EditProfileComponent }
+    {
+        path: 'view-profile' ,
+        component: ViewProfileComponent,
+        data: { title : 'View Profile'}
+    },
+    {
+        path: 'edit-profile',
+        component: EditProfileComponent,
+        data: { title: 'Edit Profile'}
+    }
 ];
 
 @NgModule({

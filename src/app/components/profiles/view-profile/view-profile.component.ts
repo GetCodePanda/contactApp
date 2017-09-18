@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from './../../../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,11 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-profile.component.css']
 })
 export class ViewProfileComponent implements OnInit {
+  title: any;
 
   data;
   constructor(
-    private _userService: UserService
-  ) { }
+    private _userService: UserService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { this.title = route.snapshot.data['title']; }
 
   ngOnInit() {
     this.data = this._userService.getProfile();

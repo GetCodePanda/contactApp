@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 export class ContactsService {
 
   path = 'https://contact-13fe7.firebaseio.com/contacts.json';
-
   constructor() { }
     // Create New Contact ..
   createContact( contact) {

@@ -8,8 +8,6 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
-
-
 @NgModule({
     declarations: [
         ViewProfileComponent,

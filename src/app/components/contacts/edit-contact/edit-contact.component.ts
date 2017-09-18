@@ -17,6 +17,7 @@ import { Contact } from './../interface/index';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
+  title: any;
   // props..
   id;
   contacts: Array<Contact> = data;
@@ -40,7 +41,10 @@ export class EditContactComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.id = route.snapshot.paramMap.get('id');
+    this.title = route.snapshot.data['title'];
+  }
 
   setCurrentContact(contacts , id) {
     return contacts.map((contact) => {
@@ -83,7 +87,7 @@ export class EditContactComponent implements OnInit {
 
   ngOnInit() {
     // finding an id of the current form.
-    this.id = this.route.snapshot.paramMap.get('id');
+
     // console.log(this.id);
     // finding the current selected contact..
     this.setCurrentContact(this.contacts, this.id);
