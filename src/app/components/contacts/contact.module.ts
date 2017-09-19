@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { FilePickerModule } from 'angular-file-picker';
 
 //  Contact Module Components :
 import { ContactsComponent } from './contacts.component';
@@ -27,7 +28,8 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
         // Md
         MdDatepickerModule,
         MdInputModule,
-        MdSelectModule
+        MdSelectModule,
+        FilePickerModule
     ]
 })
 

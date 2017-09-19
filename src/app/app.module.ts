@@ -16,8 +16,6 @@ import { AppContactModule } from './components/contacts/contact.module';
 // SERVICES
 import { UserService } from './services/user.service';
 
-// File Picker Module ...
-import { FilePickerModule } from 'angular-file-picker';
 
 
 // Angular Material
@@ -64,9 +62,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     MdDatepickerModule,
     MdInputModule,
     MdSelectModule,
-    MdMenuModule,
-    // File Picker Module
-    FilePickerModule
+    MdMenuModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -29,7 +29,6 @@ constructor (
   }
 
   ngOnInit() {
-
     this._router.events
       .map(() => this._route)
       .map((route) => {
