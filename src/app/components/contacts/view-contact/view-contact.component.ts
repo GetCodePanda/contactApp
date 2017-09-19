@@ -10,17 +10,16 @@ import { Contact } from './../interface/index';
   styleUrls: ['./view-contact.component.css']
 })
 export class ViewContactComponent implements OnInit {
-  title: any;
-
+  // props
   id;
   contacts: Array<Contact> = data;
   currentContact: Contact;
+  // function constructor ..
   constructor(
     private route: ActivatedRoute,
     private router: Router
   ) {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.title = route.snapshot.data['title'];
+    this.id = route.snapshot.paramMap.get('id');
     }
 
   setCurrentContact(contacts , id) {

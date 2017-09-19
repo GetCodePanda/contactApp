@@ -17,7 +17,7 @@ import { Contact } from './../interface/index';
   styleUrls: ['./edit-contact.component.css']
 })
 export class EditContactComponent implements OnInit {
-  title: any;
+
   // props..
   id;
   contacts: Array<Contact> = data;
@@ -40,10 +40,8 @@ export class EditContactComponent implements OnInit {
   // class constructor
   constructor(
     private route: ActivatedRoute,
-    private router: Router
   ) {
     this.id = route.snapshot.paramMap.get('id');
-    this.title = route.snapshot.data['title'];
   }
 
   setCurrentContact(contacts , id) {

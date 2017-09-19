@@ -1,4 +1,3 @@
-import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { UserService } from './../../../services/user.service';
@@ -9,17 +8,13 @@ import { UserService } from './../../../services/user.service';
   styleUrls: ['./edit-profile.component.css']
 })
 export class EditProfileComponent implements OnInit {
-  title: any;
+
 
   initialData;
   editProfile;
   constructor(
-    private _userService: UserService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
-      this.title = route.snapshot.data['title'];
-    }
+    private _userService: UserService
+  ) {}
 
   ngOnInit() {
     this.initialData = this._userService.getProfile();

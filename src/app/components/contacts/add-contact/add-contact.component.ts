@@ -1,4 +1,4 @@
-import { ActivatedRoute, Router } from '@angular/router';
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { data } from './../../../api/index';
@@ -12,8 +12,6 @@ import { DateAdapter, NativeDateAdapter } from '@angular/material';
 export class AddContactComponent implements OnInit {
 
   myForm: FormGroup;
-// title :
-  title;
 
   // form initial values :
   firstName = '';
@@ -36,12 +34,8 @@ export class AddContactComponent implements OnInit {
   previewImage = 'https://semantic-ui.com//images/wireframe/square-image.png';
 
   // class constructor..
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router ,
-    dateAdapter: DateAdapter<NativeDateAdapter> ) {
+  constructor(dateAdapter: DateAdapter<NativeDateAdapter> ) {
       dateAdapter.setLocale('de-DE');
-      this.title  = route.snapshot.data['title'];
     }
   //
   setImagePreview(event) {

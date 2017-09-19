@@ -1,5 +1,12 @@
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Component  , OnInit} from '@angular/core';
-import * as firebase from 'firebase';
+
+
+
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
+
 
 @Component({
   selector: 'app-root',
@@ -7,15 +14,33 @@ import * as firebase from 'firebase';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  fireBaseEditTest: () => firebase.Promise<any>;
 
-  title = 'Here You Are';
+
+  title;
   screenHeight = window.innerHeight;
 
+constructor (
+  private _route: ActivatedRoute,
+  private _router: Router
+) {}
 
   getScreenHeight() {
     return this.screenHeight;
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+    this._router.events
+      .map(() => this._route)
+      .map((route) => {
+        while (route.firstChild) {return route = route.firstChild; }
+        return route;
+      })
+      .filter((route) => route.outlet === 'primary')
+      .mergeMap((route) => route.data)
+      .subscribe((event) => {
+        this.title = event.title;
+        console.log('NavigationEnd:', event);
+      });
+  }
 }

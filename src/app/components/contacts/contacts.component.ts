@@ -12,7 +12,7 @@ import { Contact } from './interface/index';
     styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent implements OnInit {
-    title: any;
+
     // this property holds the current contact objects ..
     currentContact: Contact;
     // user requested number of items
@@ -37,12 +37,7 @@ export class ContactsComponent implements OnInit {
         {value: this.contacts.length, viewValue: 'All'}
     ];
 
-    constructor(
-        private route: ActivatedRoute,
-        private router: Router
-    ) {
-        this.title = route.snapshot.data['title'];
-    }
+    constructor() {}
 
     // to handle the right click event to display the selected contact
     // and set to currentContact props..

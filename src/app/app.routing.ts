@@ -14,7 +14,7 @@ export const appRoutes: Routes = [
         loadChildren: './components/contacts/contact.module#AppContactModule',
     },
     {
-        path: 'view-profile',
+        path: 'profiles',
         loadChildren: './components/profiles/profile.module#AppProfileModule',
     }
 ];
