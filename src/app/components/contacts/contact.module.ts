@@ -25,10 +25,11 @@ import { EditContactComponent } from './edit-contact/edit-contact.component';
         AppContactRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        // Md
+        // Angular Material Module Import..
         MdDatepickerModule,
         MdInputModule,
         MdSelectModule,
+        // File Module Import ...
         FilePickerModule
     ]
 })

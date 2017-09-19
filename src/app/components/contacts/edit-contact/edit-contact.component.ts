@@ -56,10 +56,6 @@ export class EditContactComponent implements OnInit {
     });
   }
 
-  test() {
-    console.log('test');
-  }
-
   setImagePreview(event) {
     this.fileName = event.name;
     this.avatar = event.dataURL;
