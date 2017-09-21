@@ -2,9 +2,14 @@ import { AppProfileRoutingModule } from './profile.routing';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+
+// Profile Service ...
+import { UserProfileService } from './../core/user-profile.service';
+
 // File Picker Module ...
 import { FilePickerModule } from 'angular-file-picker';
-// Profile Module ..
+
+// Profile Module ...
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
@@ -20,7 +25,8 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
         FormsModule,
         ReactiveFormsModule,
         FilePickerModule
-    ]
+    ],
+    providers: [UserProfileService]
 })
 
 export class AppProfileModule {}

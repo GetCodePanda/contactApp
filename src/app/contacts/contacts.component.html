@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let contact of contacts | slice:initialValue:selectedValue" (contextmenu)="onRightClick($event , contact)">
+    <tr *ngFor="let contact of contactsData | slice:initialValue:selectedValue" (contextmenu)="onRightClick($event , contact)">
       <td>
         <img src="{{contact.avatar}}" data-title="Elliot Fu" data-content="Elliot has been a member since July 2012" class="ui avatar image">
       </td>

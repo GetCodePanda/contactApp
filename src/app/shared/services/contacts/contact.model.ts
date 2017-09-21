@@ -1,12 +1,12 @@
-export interface Contact {
+export class Contact {
     id: number;
     firstName: string;
-    lastName: string;
     middleName: string;
+    lastName: string;
     phoneNumberOne: number;
     phoneNumberTwo: number;
     dob: string;
-    age: number;
+    age: 12;
     email: string;
     permanentAddress: string;
     alternateAddress: string;

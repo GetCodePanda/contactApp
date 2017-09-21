@@ -39,7 +39,7 @@ constructor (
       .mergeMap((route) => route.data)
       .subscribe((event) => {
         this.title = event.title;
-        console.log('NavigationEnd:', event);
+        // console.log('NavigationEnd:', event);
       });
   }
 }

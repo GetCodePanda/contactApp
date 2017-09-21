@@ -1,5 +1,8 @@
-export const data = [
-    {id: 1,
+import { Contact } from './contact.model';
+
+
+export const CONTACTS: Contact[] = [
+    {   id: 1,
         firstName: 'surendar',
         lastName: 'kalyanam',
         middleName: ' ',

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { data } from './../../../api/index';
+// Angular Material imports ...
 import { DateAdapter, NativeDateAdapter } from '@angular/material';
-
+// Contact Service ...
+import { ContactService } from './../../shared/services/contacts/contact.service';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -11,7 +12,6 @@ import { DateAdapter, NativeDateAdapter } from '@angular/material';
 export class AddContactComponent implements OnInit {
 
   myForm: FormGroup;
-
   // form initial values :
   firstName = '';
   middleName = '';
@@ -33,10 +33,13 @@ export class AddContactComponent implements OnInit {
   previewImage = 'https://semantic-ui.com//images/wireframe/square-image.png';
 
   // class constructor..
-  constructor(dateAdapter: DateAdapter<NativeDateAdapter> ) {
+  constructor(
+    dateAdapter: DateAdapter<NativeDateAdapter>,
+    private _contactsService: ContactService
+  ) {
       dateAdapter.setLocale('de-DE');
     }
-  //
+  // setting preview of user image.
   setImagePreview(event) {
     this.fileName = event.name;
     this.previewImage = event.dataURL;
@@ -47,7 +50,7 @@ export class AddContactComponent implements OnInit {
   onSubmit(form) {
     const RandomId = Math.floor(Math.random() * 101);
     console.log(form.value , form.value.id = RandomId  );
-    data.push(form.value);
+    this._contactsService.createNewContact(form.value);
   }
 
   onDateChange(event) {

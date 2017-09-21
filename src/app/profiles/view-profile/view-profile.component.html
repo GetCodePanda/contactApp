@@ -1,10 +1,11 @@
 <div id="view-profile">
   <div class="container">
     <div class="one column row">
+      {{data | json}}
       <div class="column">
-        <img class="ui medium circular image" src="{{data.avatar}}">
+        <img class="ui medium circular image" [src] ="data.avatar" />
         <h3 class="ui header">
-          {{data.first_name}} {{data.middle_name}} {{data.last_name}}
+          {{data.firstName}} {{data.middleName}} {{data.lastName}}
         </h3>
         <hr/>
         <div>
@@ -14,19 +15,19 @@
           <strong>Age:</strong>{{data.age}}
         </div>
         <div>
-          <strong>Email:</strong>{{data.email}}
+          <strong>Email: </strong>{{data.email}}
         </div>
         <div>
-          <strong>Contact No 1:</strong>{{data.phone_number_one}}
+          <strong>Contact No 1:</strong>{{data.phoneNumberOne}}
         </div>
         <div>
-          <strong>Contact No 2:</strong>{{data.phone_number_two}}
+          <strong>Contact No 2:</strong>{{data.phoneNumberTwo}}
         </div>
         <div>
           <strong>Address:</strong>{{data.address}}
         </div>
         <div>
-          <strong>About Me:</strong>{{data.about_me}}
+          <strong>About Me: </strong>{{data.aboutMe}}
         </div>
       </div>
     </div>

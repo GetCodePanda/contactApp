@@ -1,7 +1,6 @@
-import { ActivatedRoute, Router } from '@angular/router';
+import { UserProfileService } from './../../core/user-profile.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
-import { UserService } from './../../../services/user.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -10,20 +9,16 @@ import { UserService } from './../../../services/user.service';
 })
 export class EditProfileComponent implements OnInit {
   title: any;
-
   initialData;
   editProfile;
-  constructor(
-    private _userService: UserService,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
-      this.title = route.snapshot.data['title'];
-    }
+  constructor( private _userService: UserProfileService) {}
 
   ngOnInit() {
-    this.initialData = this._userService.getProfile();
+    // initialize the user..
+    this.initialData = this._userService.getUserProfile();
+    // initializing form data ..
     this.editProfile = new FormGroup({
+      id: new FormControl(this.initialData.firstName),
       firstName: new FormControl(this.initialData.firstName),
       middleName: new FormControl(this.initialData.middleName),
       lastName: new FormControl(this.initialData.lastName),

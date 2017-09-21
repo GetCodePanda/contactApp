@@ -1,15 +1,13 @@
 /******
-  Angular Lib
-******/
+ Angular Lib
+ ******/
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { FormControl, FormGroup } from '@angular/forms';
-/******
-  Sample data...
-******/
-import { data } from './../../../api/index';
-// Contact interface...
-import { Contact } from './../interface/index';
+
+// Contact Service ...
+import { ContactService } from './../../shared/services/contacts/contact.service';
+
 
 @Component({
   selector: 'app-edit-contact',
@@ -20,8 +18,8 @@ export class EditContactComponent implements OnInit {
 
   // props..
   id;
-  contacts: Array<Contact> = data;
-  currentContact: Contact;
+  contactsData;
+  currentContact;
   fileName: string;
 
   // initial form data
@@ -40,6 +38,7 @@ export class EditContactComponent implements OnInit {
   // class constructor
   constructor(
     private route: ActivatedRoute,
+    private _contactsService: ContactService
   ) {
     this.id = route.snapshot.paramMap.get('id');
   }
@@ -84,14 +83,14 @@ export class EditContactComponent implements OnInit {
   }
 
   ngOnInit() {
+    // setting a initial data from the service...
+    this.contactsData = this._contactsService.getContacts();
     // finding an id of the current form.
-
     // console.log(this.id);
     // finding the current selected contact..
-    this.setCurrentContact(this.contacts, this.id);
-    // console.log(this.id , this.currentContact);
+    this.setCurrentContact(this.contactsData, this.id);
+    console.log(this.id , this.currentContact);
     // edit form initialization ..
-
     this.firstName = this.currentContact.firstName;
     this.middleName = this.currentContact.middleName;
     this.lastName = this.currentContact.lastName;

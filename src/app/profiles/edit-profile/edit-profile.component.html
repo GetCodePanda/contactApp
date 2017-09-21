@@ -1,9 +1,13 @@
 <div id="edit-profile">
+    {{initialData|json}}
     <form class="ui form" [formGroup]="editProfile" (ngSubmit)="onSubmit(editProfile)">
-      {{initialData|json}}
       <div class="ui grid">
             <div class="two column row">
               <div class="column">
+                  <div class="field">
+                      <label>First Name</label>
+                      <input type="hidden" name="id"  formControlName="id">
+                    </div>
                 <div class="field">
                   <label>First Name</label>
                   <input type="text" name="firstName"  formControlName="firstName">

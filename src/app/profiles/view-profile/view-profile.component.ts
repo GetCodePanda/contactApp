@@ -1,5 +1,5 @@
+import { UserProfileService } from './../../core/user-profile.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from './../../../services/user.service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 
@@ -15,11 +15,12 @@ export class ViewProfileComponent implements OnInit {
   data;
 
   constructor(
-    private _userService: UserService
+    private _userService: UserProfileService
   ) {  }
 
   ngOnInit() {
-    this.data = this._userService.getProfile();
+    // initializing the data ..
+    this.data = this._userService.getUserProfile();
   }
 
 }
