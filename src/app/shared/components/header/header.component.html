@@ -1,7 +1,23 @@
 <header style="width:85vw !important">
     <div style="float:right !important">
         <img class="ui avatar image" src="{{user.avatar}}">
-        <span>{{user.firstName}}</span> 
+        <span>{{user.firstName}}</span>
+        <md-icon md-icon-button [mdMenuTriggerFor]="appMenu" class="button-caret" >keyboard_arrow_down</md-icon>
+        <md-menu #appMenu="mdMenu">
+            <a routerLink="/view-profile" routerLinkActive="active">
+                <button md-menu-item>
+                    <md-icon>account_circle</md-icon>
+                    <span>View Profile</span>
+                </button>
+                </a>
+                <a routerLink="/edit-profile" routerLinkActive="active">
+                <button md-menu-item>
+                    <md-icon>add_circle</md-icon>
+                    <span>Edit Profile</span>
+                </button>
+                </a>
+        </md-menu> 
     </div>
-    <p class='app-brand-name'>{{appTitle}}</p> 
+    
+    <p class='app-brand-name'>{{appTitle}}</p>  
 </header>
