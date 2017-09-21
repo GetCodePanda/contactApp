@@ -12,11 +12,11 @@ import { AppProfileRoutingModule } from './profiles/profile.routing';
 export const appRoutes: Routes = [
     {
         path: 'contacts',
-        loadChildren: './components/contacts/contact.module#AppContactModule',
+        loadChildren: './contacts/contact.module#AppContactModule',
     },
     {
         path: 'profiles',
-        loadChildren: './components/profiles/profile.module#AppProfileModule',
+        loadChildren: './profiles/profile.module#AppProfileModule',
     }
 ];
 

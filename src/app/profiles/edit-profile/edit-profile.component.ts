@@ -13,6 +13,11 @@ export class EditProfileComponent implements OnInit {
   editProfile;
   constructor( private _userService: UserProfileService) {}
 
+  // form submited...
+  onSubmit(form) {
+    return console.log(form.value);
+  }
+
   ngOnInit() {
     // initialize the user..
     this.initialData = this._userService.getUserProfile();

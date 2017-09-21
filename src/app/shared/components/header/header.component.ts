@@ -1,4 +1,6 @@
+import { UserProfileService } from './../../../core/user-profile.service';
 import { Component, OnInit, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-  @Input() appTitle:string;
+  constructor(private _userProfileService: UserProfileService ) { }
+
+  @Input() appTitle: string;
+
+  user;
+// angular life cycle..
   ngOnInit() {
+    this.user = this._userProfileService.getUserProfile();
   }
 
 }

@@ -46,7 +46,7 @@ export class ContactsComponent implements OnInit {
     }
 
     nextPage(event) {
-
+        
     }
 
     prevPage(event) {
@@ -55,7 +55,6 @@ export class ContactsComponent implements OnInit {
 
     ngOnInit() {
         this.contactsData = this._contactsService.getContacts();
-        console.log(this.contactsData.length);
     }
 
 }

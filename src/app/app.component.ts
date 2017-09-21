@@ -1,8 +1,7 @@
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Component  , OnInit} from '@angular/core';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
-
-
+// rxjs imports ...
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';

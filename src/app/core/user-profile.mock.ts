@@ -12,5 +12,5 @@ export const USERS: UserProfile = {
     email: 'test@gmail.com',
     address: 'No:123 , Main Street, City-zipcode, State. Country',
     aboutMe: 'learner',
-    avatar: 'https://semantic-ui.com/images/wireframe/image.png'
+    avatar: 'https://semantic-ui.com/images/avatar/large/jenny.jpg'
 };
