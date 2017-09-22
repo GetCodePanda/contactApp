@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import {Routes , RouterModule } from '@angular/router';
 
 // App Routing Module :
-import { AppContactRoutingModule } from './contacts/contact.routing';
-import { AppProfileRoutingModule } from './profiles/profile.routing';
+import { AppContactRoutingModule } from './contacts/contact-routing.module';
+import { AppProfileRoutingModule } from './profiles/profile-routing.module';
+
 
 
 

@@ -1,8 +1,9 @@
-import { AppProfileRoutingModule } from './profile.routing';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+// profile routing
+import { AppProfileRoutingModule } from './profile-routing.module';
 // Profile Service ...
 import { UserProfileService } from './../core/user-profile.service';
 
@@ -15,16 +16,16 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 
 @NgModule({
-    declarations: [
-        ViewProfileComponent,
-        EditProfileComponent
-    ],
     imports: [
         CommonModule,
         AppProfileRoutingModule,
         FormsModule,
         ReactiveFormsModule,
         FilePickerModule
+    ],
+    declarations: [
+        ViewProfileComponent,
+        EditProfileComponent
     ],
     providers: [UserProfileService]
 })

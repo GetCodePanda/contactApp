@@ -6,8 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 // App Root Routing Module import ...
-import { RouterModule } from '@angular/router';
-import { AppRoutingModule } from './app.routing';
+import { AppRoutingModule } from './app-routing.module';
 
 
 // App Modules imports ...
@@ -34,13 +33,8 @@ import {
   import { HeaderComponent } from './shared/components/header/header.component';
 
 
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent
-  ],
   imports: [
     // angular core ..
     BrowserModule,
@@ -60,6 +54,12 @@ import {
     MdInputModule,
     MdSelectModule,
     MdMenuModule
+  ],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SidebarComponent
   ],
   providers: [UserProfileService],
   bootstrap: [AppComponent]

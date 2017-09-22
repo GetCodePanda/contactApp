@@ -10,13 +10,13 @@
           <md-icon class="contact-phone">contact_phone</md-icon>
         </button>
         <md-menu #menuContacts="mdMenu">
-            <a routerLink="/view-contacts" routerLinkActive="active">
+            <a routerLink="/contacts/view-all" routerLinkActive="active">
               <button md-menu-item>
                 <md-icon>account_circle</md-icon>
                 <span>My Contacts</span>
               </button>
             </a>
-            <a routerLink="/add-contacts" routerLinkActive="active">
+            <a routerLink="/contacts/add" routerLinkActive="active">
               <button md-menu-item>
                 <md-icon>add_circle</md-icon>
                 <span>Add New</span>
@@ -62,13 +62,13 @@
           <md-icon class="person-pin">person_pin</md-icon>          
         </button>
         <md-menu #menuUserProfile="mdMenu">
-          <a routerLink="/view-profile" routerLinkActive="active">
+          <a routerLink="/profiles/view" routerLinkActive="active">
             <button md-menu-item>
               <md-icon>account_circle</md-icon>
               <span>View Profile</span>
             </button>
           </a>
-          <a routerLink="/edit-profile" routerLinkActive="active">
+          <a routerLink="/profiles/edit" routerLinkActive="active">
             <button md-menu-item>
               <md-icon>add_circle</md-icon>
               <span>Edit Profile</span>

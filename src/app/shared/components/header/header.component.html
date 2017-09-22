@@ -4,13 +4,13 @@
         <span>{{user.firstName}}</span>
         <md-icon md-icon-button [mdMenuTriggerFor]="appMenu" class="button-caret" >keyboard_arrow_down</md-icon>
         <md-menu #appMenu="mdMenu">
-            <a routerLink="/view-profile" routerLinkActive="active">
+            <a routerLink="/profiles/view" routerLinkActive="active">
                 <button md-menu-item>
                     <md-icon>account_circle</md-icon>
                     <span>View Profile</span>
                 </button>
                 </a>
-                <a routerLink="/edit-profile" routerLinkActive="active">
+                <a routerLink="/profiles/edit" routerLinkActive="active">
                 <button md-menu-item>
                     <md-icon>add_circle</md-icon>
                     <span>Edit Profile</span>

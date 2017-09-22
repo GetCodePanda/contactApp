@@ -9,15 +9,25 @@ import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const profileRouter: Routes = [
     {
-        path: 'view-profile' ,
-        component: ViewProfileComponent,
-        data: { title : 'View Profile'}
+        path: 'profiles' ,
+        redirectTo: 'profiles/view',
+        pathMatch: 'full'
     },
     {
-        path: 'edit-profile',
-        component: EditProfileComponent,
-        data: { title: 'Edit Profile'}
-    }
+        path: 'profiles' ,
+        children: [
+            {
+                path: 'view' ,
+                component: ViewProfileComponent,
+                data: { title : 'View Profile'}
+            },
+            {
+                path: 'edit',
+                component: EditProfileComponent,
+                data: { title: 'Edit Profile'}
+            }
+        ]
+    },
 ];
 
 @NgModule({
