@@ -1,14 +1,3 @@
-/* .app-brand-name{
-    text-align: center !important;
-} */
-
-md-grid-tile {
-    background: #657b83;
-}
-
-.app-content-wrapper{
-    background-color: #fdf6e3 !important;
-}
 
 md-grid-tile-header,md-grid-tile-footer{
     opacity: 0.5 !important;

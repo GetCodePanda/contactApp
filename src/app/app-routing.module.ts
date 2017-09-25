@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 import { CommonModule } from '@angular/common';
 // Angular Lib imports :
 import { NgModule } from '@angular/core';
@@ -18,6 +19,10 @@ export const appRoutes: Routes = [
     {
         path: 'profiles',
         loadChildren: './profiles/profile.module#AppProfileModule',
+    },
+    {
+        path: '**',
+        component: PageNotFoundComponent
     }
 ];
 

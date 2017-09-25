@@ -13,7 +13,7 @@ export class EditProfileComponent implements OnInit {
   editProfile;
   constructor( private _userService: UserProfileService) {}
 
-  // form submited...
+  // form submitted...
   onSubmit(form) {
     return console.log(form.value);
   }

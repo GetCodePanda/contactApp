@@ -31,14 +31,16 @@ constructor (
     this._router.events
       .map(() => this._route)
       .map((route) => {
-        while (route.firstChild) {return route = route.firstChild; }
+        console.log(route);
+        while (route.firstChild) { console.log(route.firstChild); return route = route.firstChild; }
         return route;
       })
       .filter((route) => route.outlet === 'primary')
-      .mergeMap((route) => route.data)
+      .mergeMap((route) => { console.log( 'Data' , route.data) ; return route.data; })
       .subscribe((event) => {
         this.title = event.title;
-        // console.log('NavigationEnd:', event);
+        console.log(event);
+        console.log('NavigationEnd:', event);
       });
   }
 }

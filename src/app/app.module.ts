@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { UserProfileService } from './core/user-profile.service';
 import { CommonModule } from '@angular/common';
 // Angular Lib Imports
@@ -31,6 +32,7 @@ import {
   import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
   import { FooterComponent } from './shared/components/footer/footer.component';
   import { HeaderComponent } from './shared/components/header/header.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 
 
@@ -40,6 +42,8 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     CommonModule,
+    // Core module ..
+    CoreModule,
     // Routing..
     AppRoutingModule,
     // App Other Module ..
@@ -59,9 +63,10 @@ import {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    PageNotFoundComponent
   ],
-  providers: [UserProfileService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

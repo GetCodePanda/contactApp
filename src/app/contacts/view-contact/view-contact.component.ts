@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 // Contact Service
-import { ContactService } from './../../shared/services/contacts/contact.service';
+import { ContactService } from '../shared/contact.service';
 
 @Component({
   selector: 'app-view-contact',

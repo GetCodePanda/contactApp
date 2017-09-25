@@ -3,15 +3,14 @@
     <md-grid-tile colspan='1'>
       <app-sidebar></app-sidebar>
     </md-grid-tile>
+
     <md-grid-tile colspan='24' class="app-content-wrapper">
       <md-grid-tile-header>
         <app-header [appTitle]="title"></app-header>
       </md-grid-tile-header>
-
       <div class="app-content-wrapper">
         <router-outlet></router-outlet>
       </div>
-
       <md-grid-tile-footer>
         <app-footer></app-footer>
       </md-grid-tile-footer>

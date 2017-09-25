@@ -3,7 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 // Angular Material imports ...
 import { DateAdapter, NativeDateAdapter } from '@angular/material';
 // Contact Service ...
-import { ContactService } from './../../shared/services/contacts/contact.service';
+import { ContactService } from '../shared/contact.service';
+
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
