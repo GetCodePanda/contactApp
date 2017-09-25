@@ -27,11 +27,12 @@ import {
   MdDatepickerModule,
   MdNativeDateModule} from '@angular/material';
 
-  // Application components
-  import { AppComponent } from './app.component';
-  import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-  import { FooterComponent } from './shared/components/footer/footer.component';
-  import { HeaderComponent } from './shared/components/header/header.component';
+// Application components
+import { AppComponent } from './app.component';
+
+import { HeaderComponent } from './shared/components/admin/header/header.component';
+import { FooterComponent } from './shared/components/admin/footer/footer.component';
+import { SidebarComponent } from './shared/components/admin/sidebar/sidebar.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 

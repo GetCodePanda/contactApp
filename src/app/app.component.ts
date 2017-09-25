@@ -5,6 +5,7 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
@@ -15,7 +16,7 @@ import 'rxjs/add/operator/mergeMap';
 export class AppComponent implements OnInit {
 
 
-  title;
+  title$: Observable<string>;
   screenHeight = window.innerHeight;
 
 constructor (
@@ -28,19 +29,18 @@ constructor (
   }
 
   ngOnInit() {
-    this._router.events
-      .map(() => this._route)
-      .map((route) => {
-        console.log(route);
-        while (route.firstChild) { console.log(route.firstChild); return route = route.firstChild; }
-        return route;
-      })
-      .filter((route) => route.outlet === 'primary')
-      .mergeMap((route) => { console.log( 'Data' , route.data) ; return route.data; })
-      .subscribe((event) => {
-        this.title = event.title;
-        console.log(event);
-        console.log('NavigationEnd:', event);
-      });
+    this.title$ = this._router.events
+    .filter(e => e instanceof NavigationEnd)
+    .map(() => {
+      let route = this._route;
+      while (route.firstChild) {
+        route = route.firstChild;
+      }
+
+      return route;
+    })
+    .filter((route) => route.outlet === 'primary')
+    .mergeMap((route) => route.data)
+    .map(data => data['title']);
   }
 }

@@ -6,7 +6,7 @@
 
     <md-grid-tile colspan='24' class="app-content-wrapper">
       <md-grid-tile-header>
-        <app-header [appTitle]="title"></app-header>
+        <app-header [appTitle]="title$ | async"></app-header>
       </md-grid-tile-header>
       <div class="app-content-wrapper">
         <router-outlet></router-outlet>
