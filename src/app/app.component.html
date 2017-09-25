@@ -2,17 +2,19 @@
   <md-grid-list cols="25" rowHeight="{{getScreenHeight()}}" gutterSize="1px">
     <md-grid-tile colspan='1'>
       <app-sidebar></app-sidebar>
+      <!-- <router-outlet name="sidebar"></router-outlet> -->
     </md-grid-tile>
-
     <md-grid-tile colspan='24' class="app-content-wrapper">
       <md-grid-tile-header>
         <app-header [appTitle]="title$ | async"></app-header>
+        <!-- <router-outlet  name="header"></router-outlet> -->
       </md-grid-tile-header>
       <div class="app-content-wrapper">
         <router-outlet></router-outlet>
       </div>
       <md-grid-tile-footer>
         <app-footer></app-footer>
+        <!-- <router-outlet  name="footer"></router-outlet> -->
       </md-grid-tile-footer>
     </md-grid-tile>
   </md-grid-list>

@@ -6,6 +6,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
+// import { HeaderComponent } from '../shared/components/admin/header/header.component';
+// import { SidebarComponent } from '../shared/components/admin/sidebar/sidebar.component';
+// import { FooterComponent } from '../shared/components/admin/footer/footer.component';
+
 
 const profileRouter: Routes = [
     {
@@ -27,7 +31,11 @@ const profileRouter: Routes = [
                 data: { title: 'Edit Profile'}
             }
         ]
-    },
+    }
+    // ,
+    // { path: '' , component: HeaderComponent, outlet: 'header'},
+    // { path: '' , component: SidebarComponent, outlet: 'sidebar'},
+    // { path: '' , component: FooterComponent, outlet: 'footer'}
 ];
 
 @NgModule({

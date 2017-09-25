@@ -7,6 +7,10 @@ import { AddContactComponent } from './add-contact/add-contact.component';
 import { ViewContactComponent } from './view-contact/view-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 
+// import { HeaderComponent } from '../shared/components/admin/header/header.component';
+// import { SidebarComponent } from '../shared/components/admin/sidebar/sidebar.component';
+// import { FooterComponent } from '../shared/components/admin/footer/footer.component';
+
 const contactRouter: Routes = [
     {
         path: 'contacts' ,
@@ -37,6 +41,10 @@ const contactRouter: Routes = [
             }
         ]
     }
+    // ,
+    // { path: '' , component: HeaderComponent, outlet: 'header'},
+    // { path: '' , component: SidebarComponent, outlet: 'sidebar'},
+    // { path: '' , component: FooterComponent, outlet: 'footer'}
 ];
 
 

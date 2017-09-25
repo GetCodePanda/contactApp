@@ -1,3 +1,55 @@
-<p>
-  register works!
-</p>
+<section class="register-wrapper">
+    <form class="ui form" [formGroup]="register" (ngSubmit)="onSubmit(register)">
+        <div class="ui grid">
+          <div class="one column row">
+            <div class="column">
+              <div class="field">
+                <label>First Name</label>
+                <input type="text" name="firstName"  formControlName="firstName">
+              </div>
+              <div class="field">
+                <label>Middle Name</label>
+                <input type="text" name="middleName"  formControlName="middleName">
+              </div>
+              <div class="field">
+                <label>Last Name</label>
+                <input type="text" name="lastName"  formControlName="lastName">
+              </div>
+              <div class="field">
+                <label>DOB</label>
+                <input type="text" name="dob"  formControlName="dob">
+              </div>
+              <div class="field">
+                <label>Age</label>
+                <input type="text" name="age"   formControlName="age">
+              </div>
+              <div class="field">
+                    <input type="hidden" name="id"  formControlName="id">
+              </div>
+              <div class="field">
+                <label>Email </label>
+                <input type="text" name="email"  formControlName="email">
+              </div>
+              <div class="field">
+                <label>Contact 1</label>
+                <input type="text" name="phoneNumberOne"  formControlName="phoneNumberOne">
+              </div>
+              <div class="field">
+                <label>Contact 2</label>
+                <input type="text" name="phoneNumberTwo"  formControlName="phoneNumberTwo">
+              </div>
+              <div class="field">
+                <label>Address</label>
+                <input type="text" name="address"  formControlName="address">
+              </div>
+              <div class="field">
+                <label>About Me</label>
+                <input type="text" name="aboutMe"  formControlName="aboutMe">
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <button class="ui button" type="submit">Submit</button>
+    </form>
+</section>

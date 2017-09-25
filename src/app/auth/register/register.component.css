@@ -1,0 +1,8 @@
+.register-wrapper {
+    width: 80vw !important;
+    height: 40vw !important;
+}
+
+.field input{
+    width: 30vw !important;
+}

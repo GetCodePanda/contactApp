@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 // App Modules imports ...
+import { AuthModule } from './auth/auth.module';
 import { AppProfileModule } from './profiles/profile.module';
 import { AppContactModule } from './contacts/contact.module';
 
@@ -48,6 +49,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
     // Routing..
     AppRoutingModule,
     // App Other Module ..
+    AuthModule,
     AppContactModule,
     AppProfileModule,
     // Angular Material ..
@@ -67,7 +69,7 @@ import { PageNotFoundComponent } from './shared/components/page-not-found/page-n
     SidebarComponent,
     PageNotFoundComponent
   ],
-  providers: [],
+  providers: [UserProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
