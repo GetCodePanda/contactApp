@@ -51,7 +51,7 @@
     </button><span *ngIf="fileName"> {{fileName}}</span>
     <input type="hidden" name="avatar"  formControlName="avatar" >
     <br><br>
-    <button class="ui button"  type="submit">Create New Contact</button>
+    <button class="ui button" [disabled]="!myForm.valid" type="submit">Create New Contact</button>
 
   </form>
 </div>

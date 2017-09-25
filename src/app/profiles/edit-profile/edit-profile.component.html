@@ -6,22 +6,57 @@
                 <div class="field">
                   <label>First Name</label>
                   <input type="text" name="firstName"  formControlName="firstName">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.firstName.invalid && editProfile.controls.firstName.dirty
+                          || editProfile.controls.firstName.touched && editProfile.controls.firstName.invalid "
+                  >
+                    firstName  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Middle Name</label>
                   <input type="text" name="middleName"  formControlName="middleName">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.middleName.invalid && editProfile.controls.middleName.dirty
+                          || editProfile.controls.middleName.touched && editProfile.controls.middleName.invalid "
+                  >
+                    middleName  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Last Name</label>
                   <input type="text" name="lastName"  formControlName="lastName">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.lastName.invalid && editProfile.controls.lastName.dirty
+                          || editProfile.controls.lastName.touched && editProfile.controls.lastName.invalid "
+                  >
+                    lastName  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>DOB</label>
                   <input type="text" name="dob"  formControlName="dob">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.dob.invalid && editProfile.controls.dob.dirty
+                          || editProfile.controls.dob.touched && editProfile.controls.dob.invalid "
+                  >
+                    dob  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Age</label>
                   <input type="text" name="age"   formControlName="age">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.age.invalid && editProfile.controls.age.dirty
+                          || editProfile.controls.age.touched && editProfile.controls.age.invalid "
+                  >
+                    age  is required.
+                  </div>
                 </div>
                 <div class="field">
                       <input type="hidden" name="id"  formControlName="id">
@@ -31,27 +66,62 @@
                 <div class="field">
                   <label>Email </label>
                   <input type="text" name="email"  formControlName="email">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.email.invalid && editProfile.controls.email.dirty
+                          || editProfile.controls.email.touched && editProfile.controls.email.invalid "
+                  >
+                    email  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Contact 1</label>
                   <input type="text" name="phoneNumberOne"  formControlName="phoneNumberOne">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.phoneNumberOne.invalid && editProfile.controls.phoneNumberOne.dirty
+                          || editProfile.controls.phoneNumberOne.touched && editProfile.controls.phoneNumberOne.invalid "
+                  >
+                    phoneNumberOne  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Contact 2</label>
                   <input type="text" name="phoneNumberTwo"  formControlName="phoneNumberTwo">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.phoneNumberTwo.invalid && editProfile.controls.phoneNumberTwo.dirty
+                          || editProfile.controls.phoneNumberTwo.touched && editProfile.controls.phoneNumberTwo.invalid "
+                  >
+                    phoneNumberTwo  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>Address</label>
                   <input type="text" name="address"  formControlName="address">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.address.invalid && editProfile.controls.address.dirty
+                          || editProfile.controls.address.touched && editProfile.controls.address.invalid "
+                  >
+                    Address  is required.
+                  </div>
                 </div>
                 <div class="field">
                   <label>About Me</label>
                   <input type="text" name="aboutMe"  formControlName="aboutMe">
+                  <div 
+                    class="ui red message" 
+                    *ngIf="editProfile.controls.address.invalid && editProfile.controls.address.dirty
+                          || editProfile.controls.address.touched && editProfile.controls.address.invalid "
+                  >
+                    About Me  is required.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <br>
-          <button class="ui button" type="submit">Submit</button>
+          <button class="ui button" [disabled]="! editProfile.valid" type="submit">Submit</button>
     </form>
 </div>

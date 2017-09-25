@@ -6,50 +6,117 @@
               <div class="field">
                 <label>First Name</label>
                 <input type="text" name="firstName"  formControlName="firstName">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.firstName.invalid && register.controls.firstName.dirty
+                        || register.controls.firstName.touched && register.controls.firstName.invalid "
+                >
+                  First Name is required.
+                </div>
               </div>
               <div class="field">
                 <label>Middle Name</label>
                 <input type="text" name="middleName"  formControlName="middleName">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.middleName.invalid && register.controls.middleName.dirty ||
+                          register.controls.middleName.touched && register.controls.middleName.invalid "
+                >
+                  Middle Name is required.
+                </div>
               </div>
               <div class="field">
                 <label>Last Name</label>
                 <input type="text" name="lastName"  formControlName="lastName">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.lastName.invalid && register.controls.lastName.dirty ||
+                          register.controls.lastName.touched && register.controls.lastName.invalid "
+                >
+                    Last Name is required.
+                </div>
               </div>
               <div class="field">
                 <label>DOB</label>
                 <input type="text" name="dob"  formControlName="dob">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.dob.invalid && register.controls.dob.dirty 
+                  || register.controls.dob.touched && register.controls.dob.invalid "
+                >
+                    Dob is required.
+                </div>
               </div>
               <div class="field">
                 <label>Age</label>
                 <input type="text" name="age"   formControlName="age">
-              </div>
-              <div class="field">
-                    <input type="hidden" name="id"  formControlName="id">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.age.invalid && register.controls.age.dirty ||
+                          register.controls.age.touched && register.controls.age.invalid "
+                >
+                    Age is required.
+                </div>
               </div>
               <div class="field">
                 <label>Email </label>
                 <input type="text" name="email"  formControlName="email">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.email.invalid && register.controls.email.dirty
+                  || register.controls.email.touched && register.controls.email.invalid "
+                >
+                    Email is required.
+                </div>
               </div>
               <div class="field">
                 <label>Contact 1</label>
                 <input type="text" name="phoneNumberOne"  formControlName="phoneNumberOne">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.phoneNumberOne.invalid && register.controls.phoneNumberOne.dirty
+                          || register.controls.phoneNumberOne.touched && register.controls.phoneNumberOne.invalid "
+                >
+                    Phone Number is required.
+                </div>
               </div>
               <div class="field">
                 <label>Contact 2</label>
                 <input type="text" name="phoneNumberTwo"  formControlName="phoneNumberTwo">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.phoneNumberTwo.invalid && register.controls.phoneNumberTwo.dirty
+                        || register.controls.phoneNumberTwo.touched && register.controls.phoneNumberTwo.invalid "
+                >
+                    Phone Number 2 is required.
+                </div>
               </div>
               <div class="field">
                 <label>Address</label>
                 <input type="text" name="address"  formControlName="address">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.address.invalid && register.controls.address.dirty 
+                          || register.controls.address.touched && register.controls.address.invalid "
+                >
+                    Address is required.
+                </div>
               </div>
               <div class="field">
                 <label>About Me</label>
                 <input type="text" name="aboutMe"  formControlName="aboutMe">
+                <div 
+                  class="ui red message" 
+                  *ngIf="register.controls.aboutMe.invalid && register.controls.aboutMe.dirty
+                        || register.controls.aboutMe.touched && register.controls.aboutMe.invalid "
+                >
+                    About Me is required.
+                </div>
               </div>
             </div>
           </div>
         </div>
         <br>
-        <button class="ui button" type="submit">Submit</button>
+        <button class="ui button" [disabled]="!register.valid" type="submit">Submit</button>
     </form>
 </section>

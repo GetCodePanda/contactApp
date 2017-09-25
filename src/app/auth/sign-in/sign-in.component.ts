@@ -1,4 +1,4 @@
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -15,8 +15,8 @@ export class SignInComponent implements OnInit {
   }
   ngOnInit() {
     this.signIn = new FormGroup({
-        userName: new FormControl(''),
-        password: new FormControl('')
+        userName: new FormControl('' , Validators.required),
+        password: new FormControl('' , Validators.required)
     });
   }
 

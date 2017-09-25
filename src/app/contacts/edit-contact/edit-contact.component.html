@@ -55,6 +55,6 @@
         </button><span *ngIf="fileName"> {{fileName}}</span>
         <input type="hidden" name="avatar"  formControlName="avatar" >
         <br><br>
-        <button class="ui button"  type="submit">Edit Contact</button>
+        <button class="ui button" [disabled] ="!editForm.valid" type="submit">Edit Contact</button>
     </form>
 </div>

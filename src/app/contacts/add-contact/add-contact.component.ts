@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 // Angular Material imports ...
 import { DateAdapter, NativeDateAdapter } from '@angular/material';
 // Contact Service ...
@@ -72,17 +72,17 @@ export class AddContactComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = new FormGroup({
-      firstName: new FormControl(this.firstName),
-      middleName: new FormControl(this.middleName),
-      lastName: new FormControl(this.lastName),
-      email: new FormControl(this.email),
-      dob: new FormControl(null),
-      age: new FormControl(this.age),
-      phoneNumberOne: new FormControl(this.phoneNumberOne),
-      phoneNumberTwo: new FormControl(this.phoneNumberTwo),
-      permanentAddress: new FormControl(this.permanentAddress),
-      alternateAddress: new FormControl(this.alternateAddress),
-      avatar: new FormControl(this.avatar),
+      firstName: new FormControl(this.firstName , Validators.required),
+      middleName: new FormControl(this.middleName , Validators.required),
+      lastName: new FormControl(this.lastName , Validators.required),
+      email: new FormControl(this.email , Validators.required),
+      dob: new FormControl(null , Validators.required),
+      age: new FormControl(this.age , Validators.required),
+      phoneNumberOne: new FormControl(this.phoneNumberOne , Validators.required),
+      phoneNumberTwo: new FormControl(this.phoneNumberTwo , Validators.required),
+      permanentAddress: new FormControl(this.permanentAddress , Validators.required),
+      alternateAddress: new FormControl(this.alternateAddress , Validators.required),
+      avatar: new FormControl(this.avatar , Validators.required),
     });
   }
 

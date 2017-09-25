@@ -1,20 +1,39 @@
 <section class="sign-in-wrapper">
   <form class="ui form" [formGroup]="signIn" (ngSubmit)="onSubmit(signIn)">
     <div class="ui grid">
-          <div class="one column row">
-            <div class="column">
-              <div class="field">
-                <label> User Name </label>
-                <input type="text" name="userName"  formControlName="userName">
-              </div>
-              <div class="field">
-                <label> Password </label>
-                <input type="password" name="password"  formControlName="password">
-              </div>
+      <div class="one column row">
+        <div class="column">
+          <div class="field">
+            <label> User Name </label>
+            <input 
+              type="text" 
+              name="userName"  
+              formControlName="userName"
+             
+            >
+            <div 
+              class="ui red message" 
+              *ngIf="signIn.controls.userName.invalid && signIn.controls.userName.dirty 
+              || signIn.controls.userName.touched && signIn.controls.userName.invalid "
+            >
+                userName is required.
             </div>
           </div>
+          <div class="field">
+            <label> Password </label>
+            <input type="password" name="password"  formControlName="password">
+            <div 
+              class="ui red message" 
+              *ngIf="signIn.controls.password.invalid && signIn.controls.password.dirty 
+              || signIn.controls.password.touched && signIn.controls.password.invalid "
+            >
+                password is required.
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <br>
-    <button class="ui button" type="submit">Submit</button>
+    <button class="ui button" [disabled]="!signIn.valid" type="submit">Submit</button>
   </form>
 </section>
